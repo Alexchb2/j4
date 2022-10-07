@@ -30,7 +30,6 @@ public class CardTest {
         $("span[data-test-id='phone'] input").setValue("+79876543210");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-//        $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(16));
         $(".notification__content").shouldHave(Condition.text("Встреча успешно забронирована на " + date), Duration.ofSeconds(15)).shouldBe(Condition.visible);
     }
 }
